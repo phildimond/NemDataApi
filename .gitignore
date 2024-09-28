@@ -1,0 +1,6 @@
+.idea/
+bin/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+*.pdb
