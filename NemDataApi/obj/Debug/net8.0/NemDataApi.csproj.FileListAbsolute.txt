@@ -1,0 +1,11 @@
+/home/phillip/source/c#/NemDataApi/NemDataApi/bin/Debug/net8.0/NemDataApi.deps.json
+/home/phillip/source/c#/NemDataApi/NemDataApi/bin/Debug/net8.0/NemDataApi.dll
+/home/phillip/source/c#/NemDataApi/NemDataApi/bin/Debug/net8.0/NemDataApi.pdb
+/home/phillip/source/c#/NemDataApi/NemDataApi/obj/Debug/net8.0/NemDataApi.GeneratedMSBuildEditorConfig.editorconfig
+/home/phillip/source/c#/NemDataApi/NemDataApi/obj/Debug/net8.0/NemDataApi.AssemblyInfoInputs.cache
+/home/phillip/source/c#/NemDataApi/NemDataApi/obj/Debug/net8.0/NemDataApi.AssemblyInfo.cs
+/home/phillip/source/c#/NemDataApi/NemDataApi/obj/Debug/net8.0/NemDataApi.csproj.CoreCompileInputs.cache
+/home/phillip/source/c#/NemDataApi/NemDataApi/obj/Debug/net8.0/NemDataApi.dll
+/home/phillip/source/c#/NemDataApi/NemDataApi/obj/Debug/net8.0/refint/NemDataApi.dll
+/home/phillip/source/c#/NemDataApi/NemDataApi/obj/Debug/net8.0/NemDataApi.pdb
+/home/phillip/source/c#/NemDataApi/NemDataApi/obj/Debug/net8.0/ref/NemDataApi.dll

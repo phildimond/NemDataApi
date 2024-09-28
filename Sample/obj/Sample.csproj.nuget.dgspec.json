@@ -1,0 +1,130 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/phillip/source/c#/NemDataApi/Sample/Sample.csproj": {}
+  },
+  "projects": {
+    "/home/phillip/source/c#/NemDataApi/NemDataApi/NemDataApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/phillip/source/c#/NemDataApi/NemDataApi/NemDataApi.csproj",
+        "projectName": "NemDataApi",
+        "projectPath": "/home/phillip/source/c#/NemDataApi/NemDataApi/NemDataApi.csproj",
+        "packagesPath": "/home/phillip/.nuget/packages/",
+        "outputPath": "/home/phillip/source/c#/NemDataApi/NemDataApi/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/phillip/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/lib/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/phillip/source/c#/NemDataApi/Sample/Sample.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/phillip/source/c#/NemDataApi/Sample/Sample.csproj",
+        "projectName": "Sample",
+        "projectPath": "/home/phillip/source/c#/NemDataApi/Sample/Sample.csproj",
+        "packagesPath": "/home/phillip/.nuget/packages/",
+        "outputPath": "/home/phillip/source/c#/NemDataApi/Sample/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/phillip/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/lib/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/phillip/source/c#/NemDataApi/NemDataApi/NemDataApi.csproj": {
+                "projectPath": "/home/phillip/source/c#/NemDataApi/NemDataApi/NemDataApi.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

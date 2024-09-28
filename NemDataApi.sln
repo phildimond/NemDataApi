@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NemDataApi", "NemDataApi\NemDataApi.csproj", "{10B3AD9A-590F-409C-BF1E-3245F227E56F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Sample\Sample.csproj", "{57FAC34F-4906-480C-BE27-27450717F1AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10B3AD9A-590F-409C-BF1E-3245F227E56F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10B3AD9A-590F-409C-BF1E-3245F227E56F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10B3AD9A-590F-409C-BF1E-3245F227E56F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10B3AD9A-590F-409C-BF1E-3245F227E56F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57FAC34F-4906-480C-BE27-27450717F1AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57FAC34F-4906-480C-BE27-27450717F1AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57FAC34F-4906-480C-BE27-27450717F1AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57FAC34F-4906-480C-BE27-27450717F1AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

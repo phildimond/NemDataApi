@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Sample/1.0.0": {
+        "dependencies": {
+          "NemDataApi": "1.0.0"
+        },
+        "runtime": {
+          "Sample.dll": {}
+        }
+      },
+      "NemDataApi/1.0.0": {
+        "runtime": {
+          "NemDataApi.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Sample/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NemDataApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
