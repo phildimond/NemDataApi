@@ -9,3 +9,4 @@
 /home/phillip/source/c#/NemDataApi/NemDataApi/obj/Debug/net8.0/refint/NemDataApi.dll
 /home/phillip/source/c#/NemDataApi/NemDataApi/obj/Debug/net8.0/NemDataApi.pdb
 /home/phillip/source/c#/NemDataApi/NemDataApi/obj/Debug/net8.0/ref/NemDataApi.dll
+/home/phillip/source/c#/NemDataApi/NemDataApi/obj/Debug/net8.0/NemDataApi.sourcelink.json

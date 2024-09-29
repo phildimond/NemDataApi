@@ -31,63 +31,63 @@ class Program
     {
         NemDataConnection nemConnection = new NemDataConnection();
         
-        NemPriceRecord[]? allRecs = nemConnection.GetNemPriceRecords();
+        NemPriceRecord[]? recs = nemConnection.GetNemPriceRecords("NSW1", DateTime.Today);
         
-        if (allRecs == null || allRecs.Length == 0)
+        if (recs == null || recs.Length == 0)
         {
             Console.WriteLine("No Nem Price Records Found");
             return;
         }
 
-        List<NemPriceRecord> recs = (from r in allRecs where (r.Region == "NSW1") select r).ToList();
-        
         DateTime lastActualPriceTime = DateTime.MinValue;
-        for (int i = 0; i < recs.Count; i++)
+        for (int i = 0; i < recs.Length; i++)
         {
             decimal averagePrice = 0;
-            if (recs[i].NemDateTime.Date == DateTime.Now.Date && recs[i].Region == "NSW1")
+
+            Console.Write($"{recs[i].NemDateTime:MM/dd/yyyy} ");
+
+            if (recs[i].IsActualPrice)
             {
-                Console.Write($"{recs[i].NemDateTime:MM/dd/yyyy} ");
-                if (recs[i].IsActualPrice)
+                Console.Write($"{(recs[i].NemDateTime.AddMinutes(-5)):HH:mm:ss} to {recs[i].NemDateTime:HH:mm:ss}: ");
+                if (i > 5)
                 {
-                    Console.Write(
-                        $"{(recs[i].NemDateTime.AddMinutes(-5)):HH:mm:ss} to {recs[i].NemDateTime:HH:mm:ss}: ");
-                    if (i > 5)
-                    {
-                        averagePrice = 0;
-                        for (int j = i - 5; j <= i; j++)
-                            averagePrice += recs[j].PricePerMwh;
-                        averagePrice /= 6;
-                    }
-
-                    lastActualPriceTime = recs[i].NemDateTime;
-                }
-                else
-                {
-                    int addMins = 0;
-                    if (lastActualPriceTime != DateTime.MinValue)
-                        addMins = 0 - (30 - lastActualPriceTime.Minute);
-                    Console.Write(
-                        $"{recs[i].NemDateTime.AddMinutes(addMins):HH:mm:ss} to {(recs[i].NemDateTime):HH:mm:ss}: ");
-                    lastActualPriceTime = DateTime.MinValue;
+                    averagePrice = 0;
+                    for (int j = i - 5; j <= i; j++) averagePrice += recs[j].PricePerMwh;
+                    averagePrice /= 6;
                 }
 
-                Console.Write(recs[i].IsActualPrice ? "Actual " : "Forecast ");
-                decimal priceCentsPerKwh = (recs[i].PricePerMwh / 1000 * 100); // MWh->kWh div 1000, $ to cents * 100
-                priceCentsPerKwh += AmberBuyNetworkCharges;
-                priceCentsPerKwh *= GstMultiplier;
-                Console.Write($"{(priceCentsPerKwh):0.0000}c/kWh ");
-                if (recs[i].IsActualPrice)
-                {
-                    decimal averagePriceCentsPerKwh =
-                        averagePrice / 1000 * 100; // MWh->kWh div 1000, $ to cents * 100
-                    averagePriceCentsPerKwh += AmberBuyNetworkCharges;
-                    averagePriceCentsPerKwh *= GstMultiplier;
-                    Console.Write($"Average = {averagePriceCentsPerKwh:0.0000}c/kWh ");
-                }
-
-                Console.WriteLine();
+                lastActualPriceTime = recs[i].NemDateTime;
             }
+            else // forecast
+            {
+                int addMins = -30;
+                if (lastActualPriceTime != DateTime.MinValue)
+                {
+                    addMins = 0 - (30 - lastActualPriceTime.Minute);
+                    if (addMins > 30) addMins -= 30;
+                }
+
+                Console.Write(
+                    $"{recs[i].NemDateTime.AddMinutes(addMins):HH:mm:ss} to {(recs[i].NemDateTime):HH:mm:ss}: ");
+                lastActualPriceTime = DateTime.MinValue;
+            }
+
+            Console.Write(recs[i].IsActualPrice ? "Actual " : "Forecast ");
+            decimal priceCentsPerKwh = (recs[i].PricePerMwh / 1000 * 100); // MWh->kWh div 1000, $ to cents * 100
+            priceCentsPerKwh += AmberBuyNetworkCharges;
+            priceCentsPerKwh *= GstMultiplier;
+            Console.Write($"{(priceCentsPerKwh):0.0000}c/kWh ");
+
+            if (recs[i].IsActualPrice)
+            {
+                decimal averagePriceCentsPerKwh =
+                    averagePrice / 1000 * 100; // MWh->kWh div 1000, $ to cents * 100
+                averagePriceCentsPerKwh += AmberBuyNetworkCharges;
+                averagePriceCentsPerKwh *= GstMultiplier;
+                Console.Write($"Average = {averagePriceCentsPerKwh:0.0000}c/kWh ");
+            }
+
+            Console.WriteLine();
         }
     }
 }

@@ -4,7 +4,7 @@ This C# DLL and sample program uses an undocumented AEMO open API to retrieve pr
 
 The API calls were gleaned by inspection of the Dashboard web page. I'm glad these are there, as they make trading via Amber and similar retailer much easier.
 
-The sample program uses the Price and Demand data to calculate the settlement and forecast prices from the current day, adding in the network tariff charges for the Ausgrid EA116 Residential Demand tariff. This cna be compared to Amber Electric prices. Amber now seems to be using their own "forecast" prices instead of the AEMO ones, and they're rubbish from my experience.  
+The sample program uses the Price and Demand data to calculate the settlement and forecast prices from the current day, adding in the network tariff charges for the Ausgrid EA116 Residential Demand tariff. This can be compared to Amber Electric prices. Amber now seems to be using their own "forecast" prices instead of the AEMO ones, and they're rubbish from my experience.  
 
 The APIs I've identified to date include:
 

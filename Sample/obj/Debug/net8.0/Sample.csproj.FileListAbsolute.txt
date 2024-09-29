@@ -16,3 +16,4 @@
 /home/phillip/source/c#/NemDataApi/Sample/obj/Debug/net8.0/Sample.pdb
 /home/phillip/source/c#/NemDataApi/Sample/obj/Debug/net8.0/Sample.genruntimeconfig.cache
 /home/phillip/source/c#/NemDataApi/Sample/obj/Debug/net8.0/ref/Sample.dll
+/home/phillip/source/c#/NemDataApi/Sample/obj/Debug/net8.0/Sample.sourcelink.json
